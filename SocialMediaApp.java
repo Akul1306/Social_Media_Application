@@ -1,4 +1,4 @@
-  import java.io.*;
+import java.io.*;
 import java.util.Scanner;
 
 public class SocialMediaApp {
@@ -113,10 +113,8 @@ public class SocialMediaApp {
     private static void connectWithFriends(Scanner scanner) throws IOException {
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
-
         // display the user's current friends
         reader = new BufferedReader(new FileReader(new File(FRIENDS_FILE)));
-        System.out.println("Current friends:");
         String line;
         while ((line = reader.readLine()) != null) {
             String[] tokens = line.split(",");
